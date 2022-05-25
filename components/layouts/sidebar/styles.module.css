@@ -1,0 +1,77 @@
+.sidebar {
+  background-color: #0d46c1;
+  color: #fff;
+  max-width: 329px;
+  width: 100%;
+  padding-left: 30px;
+  padding-top: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    padding-left: 15px;
+    max-width: unset;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    padding-left: 0;
+  }
+}
+
+.logo {
+  font-family: "Passion One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 44px;
+  color: #ffffff;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .logo {
+    width: 71px;
+    font-size: 1.2rem;
+    line-height: 17px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    margin: auto;
+  }
+}
+
+.sidelinks {
+  padding-left: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 39px;
+}
+
+.spaceundersidebar {
+  height: 100%;
+  width: 100%;
+  max-width: 329px;
+}
+
+@media screen and (max-width: 900px) {
+  .spaceundersidebar {
+    max-width: 107px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .spaceundersidebar {
+    max-width: 77px;
+  }
+}
