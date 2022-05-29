@@ -1,7 +1,9 @@
 import { Fragment } from "react";
 
+import DashboardComponents from "../components/pages/dashboard";
+
 const Dashboard = () => {
-  return <Fragment>Dashbord page</Fragment>;
+  return <DashboardComponents />;
 };
 
 export default Dashboard;
