@@ -1,3 +1,6 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "jest/globals": true
+  },
+  "extends": ["plugin:jest/recommended", "next/core-web-vitals"]
 }

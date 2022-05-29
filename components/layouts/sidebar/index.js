@@ -15,60 +15,67 @@ import classes from "./styles.module.css";
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
 
+  // tabs data
+  const tabs = [
+    {
+      id: 1,
+      name: "Dashboard",
+      icon: <DashboardIcon />,
+      route: "dashboard",
+    },
+    {
+      id: 2,
+      name: "Maps",
+      icon: <LocationIcon />,
+      route: "maps",
+    },
+    {
+      id: 3,
+      name: "Hospital",
+      icon: <HospitalIcon />,
+      route: "hospital",
+    },
+    {
+      id: 4,
+      name: "Symptoms",
+      icon: <DoctorToolIcon />,
+      route: "symptoms",
+    },
+    {
+      id: 5,
+      name: "Test Yourself",
+      icon: <BacteriaIcon />,
+      route: "test",
+    },
+    {
+      id: 6,
+      name: "Vaccine",
+      icon: <DoctorKitIcon />,
+      route: "vaccine",
+    },
+    {
+      id: 7,
+      name: "News",
+      icon: <NewsFeedIcon />,
+      route: "news",
+    },
+  ];
+
   return (
     <Fragment>
       <nav className={classes.sidebar}>
         <h1 className={classes.logo}>Covid-19 Tracker</h1>
         <ul className={classes.sidelinks}>
-          <Tap
-            name="Dashboard"
-            icon={<DashboardIcon />}
-            active={activeTab === "dashboard" ? true : false}
-            tabName="dashboard"
-            setActiveTab={setActiveTab}
-          />
-          <Tap
-            name="Maps"
-            icon={<LocationIcon />}
-            active={activeTab === "maps" ? true : false}
-            tabName="maps"
-            setActiveTab={setActiveTab}
-          />
-          <Tap
-            name="Hospital"
-            icon={<HospitalIcon />}
-            active={activeTab === "hospital" ? true : false}
-            tabName="hospital"
-            setActiveTab={setActiveTab}
-          />
-          <Tap
-            name="Symptoms"
-            icon={<DoctorToolIcon />}
-            active={activeTab === "symptoms" ? true : false}
-            tabName="symptoms"
-            setActiveTab={setActiveTab}
-          />
-          <Tap
-            name="Test Yourself"
-            icon={<BacteriaIcon />}
-            active={activeTab === "test" ? true : false}
-            tabName="test"
-            setActiveTab={setActiveTab}
-          />
-          <Tap
-            name="Vaccine"
-            icon={<DoctorKitIcon />}
-            active={activeTab === "vaccine" ? true : false}
-            tabName="vaccine"
-            setActiveTab={setActiveTab}
-          />
-          <Tap
-            name="News"
-            icon={<NewsFeedIcon />}
-            active={activeTab === "news" ? true : false}
-            tabName="news"
-            setActiveTab={setActiveTab}
-          />
+          {tabs.map(({ id, name, icon, route }) => (
+            <Tap
+              key={id}
+              name={name}
+              icon={icon}
+              active={activeTab === route ? true : false}
+              tabName={route}
+              setActiveTab={setActiveTab}
+            />
+          ))}
         </ul>
       </nav>
       <div className={classes.spaceundersidebar} />
