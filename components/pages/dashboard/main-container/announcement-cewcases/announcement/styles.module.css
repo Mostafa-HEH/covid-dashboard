@@ -1,0 +1,64 @@
+.container {
+  width: 100%;
+  min-height: 366px;
+  background: linear-gradient(
+    270deg,
+    rgba(13, 70, 193, 0.601808) 0%,
+    #0d46c1 100%
+  );
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.0986943);
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.tag {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.188rem;
+  line-height: 28px;
+  color: #0d46c1;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.head {
+  margin: 20px 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+.dottes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.dottes .dot {
+  display: block;
+  background: #f2f2f2;
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+}
+
+.dottes .dot.active {
+  background: #00ff09;
+  height: 15px;
+  width: 15px;
+}

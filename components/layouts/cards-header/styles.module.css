@@ -1,0 +1,27 @@
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chartname {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 33px;
+  color: #1b1b29;
+}
+
+.select,
+.select:focus-visible {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  text-align: right;
+  color: #35384d;
+  border: unset;
+  cursor: pointer;
+}

@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 30px;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.0986943);
+  border-radius: 10px;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 33px;
+  color: #1b1b29;
+}
+
+.explane {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.box {
+  border-radius: 2px;
+  height: 15px;
+  width: 15px;
+  background: #0d46c1;
+}
+
+.category:last-child .box {
+  opacity: 0.5;
+}
+
+.name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+  color: #35384d;
+}
+
+.map {
+  background: #e7edf9;
+  mix-blend-mode: normal;
+  border-radius: 10px;
+  height: 273px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.search {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.search svg path {
+  fill: #0d46c1;
+  width: 16px;
+  height: 16px;
+}
+
+.search:hover {
+  background: #0d46c1;
+}
+
+.search:hover svg path {
+  fill: #ffffff;
+}
+
+.zooming {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  gap: 2px;
+}
+
+.zoomin {
+  background: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px 8px 0 0;
+  color: #0d46c1;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.zoomin:hover {
+  color: #ffffff;
+  background: #0d46c1;
+}
+
+.zoomout {
+  background: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 8px 8px;
+  color: #0d46c1;
+  cursor: pointer;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+}
+
+.zoomout:hover {
+  color: #ffffff;
+  background: #0d46c1;
+}
