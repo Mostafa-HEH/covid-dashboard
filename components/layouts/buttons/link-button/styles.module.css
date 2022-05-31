@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.188rem;
+  line-height: 28px;
+}
+
+.button.blue {
+  color: #0d46c1;
+}
+
+.button.blue .icon svg path {
+  fill: #0d46c1;
+}
+
+.button.green {
+  color: #00ff09;
+}
+
+.button.green .icon svg path {
+  fill: #00ff09;
+}

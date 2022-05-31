@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 30px;
+  background: linear-gradient(
+    270deg,
+    rgba(13, 70, 193, 0.39505) 0%,
+    #0d46c1 42.36%
+  );
+  border-radius: 10px;
+  width: 100%;
+}
+
+.heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 39px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.subheading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.938rem;
+  line-height: 23px;
+  color: #ffffff;
+  margin: 0;
+  width: 496px;
+}
