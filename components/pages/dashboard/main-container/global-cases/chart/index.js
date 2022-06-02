@@ -53,7 +53,12 @@ const Charts = () => {
 
   return (
     <div className="mixed-chart">
-      <ApexCharts options={data.options} series={data.series} type="area" />
+      <ApexCharts
+        options={data.options}
+        series={data.series}
+        type="area"
+        height={400}
+      />
     </div>
   );
 };
