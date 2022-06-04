@@ -3,11 +3,11 @@ import RightContainer from "./right-container";
 
 import classes from "./styles.module.css";
 
-const DashboardComponents = ({ todayCases, yesterdayCases }) => {
+const DashboardComponents = ({ todayCases, yesterdayCases, topEffected }) => {
   return (
     <div className={classes.container}>
       <MainContainer todayCases={todayCases} yesterdayCases={yesterdayCases} />
-      <RightContainer />
+      <RightContainer topEffected={topEffected} />
     </div>
   );
 };

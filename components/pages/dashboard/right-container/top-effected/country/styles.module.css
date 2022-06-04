@@ -18,6 +18,12 @@
   width: 120px;
 }
 
+.flag img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .textcontainer {
   display: flex;
   flex-direction: column;
