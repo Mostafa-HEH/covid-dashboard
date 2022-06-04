@@ -1,17 +1,17 @@
 import classes from "./styles.module.css";
 
-const Case = () => {
+const Case = ({ flag, name, total, newcases }) => {
   return (
     <div className={classes.container}>
       <div className={classes.flag}>
-        <img src="" alt="" />
+        <img src={flag} alt={`${name} flag`} />
       </div>
       <div className={classes.details}>
         <div className={classes.nametotal}>
-          <div className={classes.name}>France</div>
-          <div className={classes.total}>158,183</div>
+          <div className={classes.name}>{name}</div>
+          <div className={classes.total}>{total}</div>
         </div>
-        <div className={classes.newcases}>+589</div>
+        <div className={classes.newcases}>+{newcases}</div>
       </div>
     </div>
   );

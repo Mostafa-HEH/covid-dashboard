@@ -5,12 +5,15 @@ import AffectedArea from "./affected-area";
 
 import classes from "./styles.module.css";
 
-const MainContainer = () => {
+const MainContainer = ({ todayCases, yesterdayCases }) => {
   return (
     <div className={classes.container}>
       <Symptoms />
       <GlobalCases />
-      <AnnouncementCewcases />
+      <AnnouncementCewcases
+        todayCases={todayCases}
+        yesterdayCases={yesterdayCases}
+      />
       <AffectedArea />
     </div>
   );

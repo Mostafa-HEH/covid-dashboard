@@ -1,9 +1,20 @@
+import { useState } from "react";
 import CardsHeader from "../../../../../layouts/cards-header";
 import Case from "./case";
 
 import classes from "./styles.module.css";
 
-const NewCases = () => {
+const NewCases = ({ todayCases, yesterdayCases }) => {
+  const [data, setData] = useState(todayCases);
+
+  const handleChange = (e) => {
+    if (e.target.value == 1) {
+      setData(todayCases);
+    } else {
+      setData(yesterdayCases);
+    }
+  };
+
   return (
     <div className={classes.container}>
       <CardsHeader
@@ -18,21 +29,21 @@ const NewCases = () => {
             name: "Yesterday",
           },
         ]}
+        handleChange={handleChange}
       />
       <div className={classes.newcases}>
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
+        {data.map(
+          ({ country, countryInfo, todayCases, cases }) =>
+            todayCases !== 0 && (
+              <Case
+                key={country}
+                flag={countryInfo.flag}
+                name={country}
+                total={cases}
+                newcases={todayCases}
+              />
+            )
+        )}
       </div>
     </div>
   );
