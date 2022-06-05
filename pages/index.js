@@ -2,12 +2,18 @@ import { Fragment } from "react";
 
 import DashboardComponents from "../components/pages/dashboard";
 
-const Dashboard = ({ todayCases, yesterdayCases, topEffected }) => {
+const Dashboard = ({
+  todayCases,
+  yesterdayCases,
+  topEffected,
+  allGlobalDays,
+}) => {
   return (
     <DashboardComponents
       todayCases={todayCases}
       yesterdayCases={yesterdayCases}
       topEffected={topEffected}
+      allGlobalDays={allGlobalDays}
     />
   );
 };
@@ -30,17 +36,23 @@ export async function getStaticProps(context) {
   )
     .then((res) => res.json())
     .then((data) =>
-      data.filter((country, id) => {
-        // id < 22 return top 20 country
-        if (country.country !== "Israel") return country;
+      data.filter(({ country }) => {
+        if (country !== "Israel") return country;
       })
     );
+
+  const allGlobalDays = await fetch(
+    "https://disease.sh/v3/covid-19/historical/all?lastdays=all"
+  )
+    .then((res) => res.json())
+    .then((data) => data);
 
   return {
     props: {
       todayCases,
       yesterdayCases,
       topEffected,
+      allGlobalDays,
     },
   };
 }
