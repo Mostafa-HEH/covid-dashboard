@@ -2,5 +2,10 @@
   "env": {
     "jest/globals": true
   },
-  "extends": ["plugin:jest/recommended", "next/core-web-vitals"]
+  "extends": [
+    "plugin:jest/recommended",
+    "next/core-web-vitals",
+    "next/core-web-vitals"
+  ],
+  "rules": { "react/no-unescaped-entities": 0 }
 }
