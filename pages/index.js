@@ -35,11 +35,7 @@ export async function getStaticProps(context) {
     "https://disease.sh/v3/covid-19/countries?sort=cases"
   )
     .then((res) => res.json())
-    .then((data) =>
-      data.filter(({ country }) => {
-        if (country !== "Israel") return country;
-      })
-    );
+    .then((data) => data.filter(({ country }) => country !== "Israel"));
 
   const allGlobalDays = await fetch(
     "https://disease.sh/v3/covid-19/historical/all?lastdays=all"

@@ -14,7 +14,7 @@ const MainContainer = ({ todayCases, yesterdayCases, allGlobalDays }) => {
         todayCases={todayCases}
         yesterdayCases={yesterdayCases}
       />
-      <AffectedArea />
+      {/* <AffectedArea /> */}
     </div>
   );
 };
